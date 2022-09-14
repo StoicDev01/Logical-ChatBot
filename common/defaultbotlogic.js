@@ -226,7 +226,7 @@ export default class DefaultBotLogic extends ChatBotLogic {
                         let search_response = await search_text_for_intents(
                             response_text, 
                             [
-                                {intent : "answer", score : 0.4},
+                                {intent : "answer", score : 0.6},
                                 {intent : "question", score : 0.2}
                             ], 
                             new_classifier
@@ -274,6 +274,14 @@ export default class DefaultBotLogic extends ChatBotLogic {
                     "See you soon.",
                     "Until next time."
                 ]
+
+                if (bot.content.user_name){
+                    replies = replies.concat([
+                        "Good Bye {{user_name}}",
+                        "Until Next time {{user_name}}",
+                        "See you soon. {{user_name}}",
+                    ]);
+                }
         
                 return bot.random_choice(replies);
             })
