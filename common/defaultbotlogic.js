@@ -275,7 +275,7 @@ export default class DefaultBotLogic extends ChatBotLogic {
                     "Until next time."
                 ]
 
-                if (bot.content.user_name){
+                if (bot.context.user_name){
                     replies = replies.concat([
                         "Good Bye {{user_name}}",
                         "Until Next time {{user_name}}",

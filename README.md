@@ -18,6 +18,13 @@ Currently it only works on Telegram, on the future it will work on Discord.
 ### Search on Google
 ![image](./conversation_imgs/3.png)
 
+### Remember with context
+![image](./conversation_imgs/4.png)
+
+### do not contradict
+![image](./conversation_imgs/5.png)
+
+
 ## How does this work?
 - First the bot recieve an input text, example "Hello! How are you?"
 - And then the bot split the text in sentences ["Hello!", "How are you?]
