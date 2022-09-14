@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "@nlpjs/core": "^4.23.4",
+    "axios": "^0.27.2",
+    "cheerio": "^1.0.0-rc.12",
+    "classifier.js": "^1.0.4",
+    "colors": "^1.4.0",
+    "compromise": "^14.5.0",
+    "google-it": "^1.6.3",
+    "natural": "^5.2.3",
+    "nlpjs": "^0.0.2",
+    "node-html-parser": "^6.0.0",
+    "node-nlp": "^4.24.0",
+    "telegraf": "^4.9.1",
+    "unfluff": "^3.2.0",
+    "wikijs": "^6.3.3"
+  },
+  "type": "module",
+  "devDependencies": {
+    "eslint": "^8.23.0"
+  }
+}

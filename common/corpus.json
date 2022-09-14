@@ -1,0 +1,123 @@
+{
+    "name" : "Main Corpus",
+    "locale" : "en-US",
+    "contextData" : {
+        "spiderman": {
+            "realName": "Peter Parker",
+            "city": "Queens, New York"
+        },
+        "ironman": {
+            "realName": "Tony Stark",
+            "city": "Stark Tower, New York"
+        },
+        "thor": {
+            "realName": "Odinson",
+            "city": "Asgard"
+        }
+    },
+
+    "entities" : {
+        "character" : {
+            "options" : {
+                "spiderman" : ["spiderman", "spider-man"],
+                "ironman" : ["spiderman", "spider-man"],
+                "thor" : ["thor"]
+            }
+        
+        }
+    },
+
+    "data" : [
+        {
+            "intent" : "greeting",
+            "utterances" : [
+                "Hello!",
+                "Hello",
+                "Hello!",
+                "Greetings.",
+                "Hi"
+            ]
+        },
+        {
+            "intent" : "ask.name",
+            "utterances" : [
+                "What is your name?",
+                "Who are you?"
+            ]
+        },
+        {
+            "intent" : "ask.yes_or_no",
+            "utterances" : [
+                "Do You like Cheese?",
+                "Do You like Cake?",
+                "Do You have a head?",
+                "You are alive?"
+            ]
+        },
+        {
+            "intent" : "declare.name",
+            "utterances" : [
+                "I am %name%",
+                "My name is %name%"
+            ]
+        },
+        {
+            "intent" : "ask.state",
+            "utterances" : [
+                "How are you?",
+                "what are you feeling?",
+                "How you are?"
+            ]
+        },
+        {
+            "intent" : "ask.whatis",
+            "utterances" : [
+                "What is a car?",
+                "What is Wikpedia?",
+                "What is a car?",
+                "who is spider man?",
+                "who is %character%?",
+                "tell me about X"
+            ]
+        },
+        {
+            "intent" : "ask.tellmore",
+            "utterances" : [
+                "Tell me more"
+            ]
+        },
+        {
+            "intent" : "goodbye",
+            "utterances" : [
+                "GoodBye",
+                "until next time",
+                "See ya"
+            ]
+        },
+        {
+            "intent" : "ask.preference",
+            "utterances" : [
+                "Do You like X?",
+                "What you think about Y?"
+            ]
+        },
+        {
+            "intent" : "ask.why",
+            "utterances" : [
+                "Why you like X?",
+                "Why you do this?",
+                "Why ou think it?",
+                "Why?",
+                "Which is the best Y?",
+                "What is the best Z",
+                "Do x is good?",
+                "Does Y is the best?",
+                "Does X is worse?",
+                "How to make meal?",
+                "How do i make X?",
+                "How can i make X",
+                "How was Russia in 1900?"
+            ]
+        }
+    ]
+}
