@@ -5,6 +5,7 @@ import wiki from 'wikijs'
 import googleIt from 'google-it'
 import axios from "axios";
 import { parse } from 'node-html-parser'
+import { input } from "@tensorflow/tfjs";
 
 const wikipedia = wiki.default();
 
@@ -134,15 +135,17 @@ export default class DefaultBotLogic extends ChatBotLogic {
 
             new IntentReplyLogic("ask.whatis", 0.2, async (input_sentence, bot) => {
                 // Search on wikpedia
-                let result = await wikipedia.find(input_sentence);
-
-                bot.log("Wikipedia result : ", result);
+                let result = await wikipedia.find(input_sentence).catch(err => {
+                    console.log("ERROR searching on wikipedia for : ", input_sentence);
+                });
 
                 if (result){
+                    bot.log("Wikipedia result : ", result);
+
                     let content = await result.rawContent()
 
                     let search_result = await search_text_for_intents(content, [
-                        {intent : "answer", score : 0.4}
+                        {intent : "answer", score : 0.6}
                     ], classifier);
 
                     bot.context.last_result = content;
